@@ -43,10 +43,28 @@ def compare_rolls(roll1, roll2):
     return -1
 
 
+class Roll():
+    def __init__(self):
+        self.roll = roll_3d6()
+
+    def score(self):
+        return score_roll(self.roll)
+
+    def __sub__(self, other):
+        if isinstance(other, Roll):
+            return compare_rolls(self.roll, other.roll)
+        return NotImplemented
+
+    def __str__(self):
+        die_chars = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
+        roll_chars = list(map(lambda x: die_chars[x-1], self.roll))
+        return ' '.join(roll_chars)
+
+
 if __name__ == "__main__":
-    player1_roll = roll_3d6()
-    player2_roll = roll_3d6()
-    result = compare_rolls(player1_roll, player2_roll)
+    player1_roll = Roll()
+    player2_roll = Roll()
+    result = player2_roll - player1_roll
 
     print(f"player 1 rolls {player1_roll}")
     print(f"player 2 rolls {player2_roll}")
