@@ -23,6 +23,12 @@ def score_roll(roll):
     if sorted_roll[1] == sorted_roll[2]:
         return sorted_roll[0]
 
+    if sorted_roll == [1, 2, 3]:
+        return -1
+
+    if sorted_roll == [4, 5, 6]:
+        return 20
+
     return 0
 
 
