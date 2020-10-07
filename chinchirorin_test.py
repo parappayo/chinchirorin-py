@@ -2,26 +2,26 @@ import unittest, chinchirorin
 
 
 score_roll_test_cases = [
-    # { "roll": [1, 1, 2], "expected": 2 },
-    # { "roll": [1, 3, 1], "expected": 3 },
-    # { "roll": [4, 5, 5], "expected": 4 },
-    # { "roll": [6, 6, 3], "expected": 3 },
+    { "roll": [1, 1, 2], "expected": 2 },
+    { "roll": [1, 3, 1], "expected": 3 },
+    { "roll": [4, 5, 5], "expected": 4 },
+    { "roll": [6, 6, 3], "expected": 3 },
     { "roll": [1, 1, 1], "expected": 11 },
     { "roll": [2, 2, 2], "expected": 12 },
     { "roll": [5, 5, 5], "expected": 15 },
-    # { "roll": [1, 3, 5], "expected": 0 },
+    { "roll": [1, 3, 5], "expected": 0 },
     # { "roll": [1, 2, 3], "expected": -1 },
     # { "roll": [4, 5, 6], "expected": 20 },
 ]
 
 
 compare_rolls_test_cases = [
-    # { "roll1": [1, 1, 2], "roll2": [1, 1, 3], "expected": 1 },
-    # { "roll1": [1, 1, 3], "roll2": [1, 1, 2], "expected": -1 },
+    { "roll1": [1, 1, 2], "roll2": [1, 1, 3], "expected": 1 },
+    { "roll1": [1, 1, 3], "roll2": [1, 1, 2], "expected": -1 },
     # { "roll1": [3, 5, 6], "roll2": [2, 4, 5], "expected": 0 },
     # { "roll1": [3, 5, 6], "roll2": [3, 3, 5], "expected": 1 },
     # { "roll1": [5, 5, 6], "roll2": [3, 4, 5], "expected": -1 },
-    # { "roll1": [5, 5, 6], "roll2": [1, 1, 1], "expected": 1 },
+    { "roll1": [5, 5, 6], "roll2": [1, 1, 1], "expected": 1 },
     { "roll1": [1, 1, 1], "roll2": [2, 2, 2], "expected": 1 },
     { "roll1": [3, 3, 3], "roll2": [3, 3, 3], "expected": 0 },
     { "roll1": [6, 6, 6], "roll2": [5, 5, 5], "expected": -1 },

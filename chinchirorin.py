@@ -14,7 +14,14 @@ def score_roll(roll):
     """Determines the numerical score for the given roll."""
     if is_triple(roll):
         return roll[0] + 10
-    #sorted_roll = sorted(roll)
+
+    sorted_roll = sorted(roll)
+
+    if sorted_roll[0] == sorted_roll[1]:
+        return sorted_roll[2]
+
+    if sorted_roll[1] == sorted_roll[2]:
+        return sorted_roll[0]
 
     return 0
 
