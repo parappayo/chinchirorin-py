@@ -52,7 +52,7 @@ class Roll():
 
     def __sub__(self, other):
         if isinstance(other, Roll):
-            return compare_rolls(self.roll, other.roll)
+            return compare_rolls(other.roll, self.roll)
         return NotImplemented
 
     def __str__(self):
